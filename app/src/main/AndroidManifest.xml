@@ -16,6 +16,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ActionsActivity"
+            android:label="@string/title_activity_actions"
+            android:parentActivityName=".CodeActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.juanjoalvarez.kidsprogramming.CodeActivity" />
+        </activity>
+        <activity
+            android:name=".ActivatorActivity"
+            android:label="@string/title_activity_activator"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ConditionActivity"
+            android:label="@string/title_activity_condition"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

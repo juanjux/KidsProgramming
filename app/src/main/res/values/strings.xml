@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">KidsProgramming</string>
+    <string name="title_activity_actions">ActionsActivity</string>
+    <string name="title_activity_activator">ActivatorActivity</string>
+    <string name="title_activity_condition">ConditionActivity</string>
 </resources>

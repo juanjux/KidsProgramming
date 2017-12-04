@@ -10,28 +10,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Touch"
+        app:layout_constraintBottom_toTopOf="@+id/button_drag"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="63dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_drag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Drag"
+        app:layout_constraintBottom_toTopOf="@+id/button_mic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="178dp" />
+        app:layout_constraintTop_toBottomOf="@+id/button_press" />
 
     <Button
         android:id="@+id/button_mic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Say"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="290dp" />
+        app:layout_constraintTop_toBottomOf="@+id/button_drag" />
 </android.support.constraint.ConstraintLayout>
