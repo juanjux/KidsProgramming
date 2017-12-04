@@ -1,0 +1,19 @@
+Type:
+
+- If condition
+- While condition
+- Until condition
+
+Condition:
+
+- Button press
+- Button drag to another button
+- Mic (say word)
+
+Robot Actions:
+
+- Play audio from preset list (animal sounds, etc).
+- Play song from preset list
+- Play preset animation (animal eats, play, happy, sad, etc).
+- Show image from gallery
+- Play video/audio from gallery
