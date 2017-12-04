@@ -1,3 +1,3 @@
 package net.juanjoalvarez.kidsprogramming
 
-enum class Activator { Unset, If, While, Until }
+enum class Activator { Unset, When, While, Until }

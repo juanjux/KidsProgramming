@@ -11,13 +11,13 @@ class ActivatorActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_activator)
 
-        val btnIf: Button = findViewById<Button>(R.id.button_if)
+        val btnIf: Button = findViewById<Button>(R.id.button_when)
         val btnWhile: Button = findViewById<Button>(R.id.button_while)
         val btnUntil: Button = findViewById<Button>(R.id.button_until)
         val ret = Intent()
 
         btnIf.setOnClickListener {
-            setResult(Activator.If.ordinal, ret)
+            setResult(Activator.When.ordinal, ret)
             finish()
         }
 
