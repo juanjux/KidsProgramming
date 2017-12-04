@@ -5,36 +5,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button_press"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Touch"
-        app:layout_constraintBottom_toTopOf="@+id/button_drag"
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
 
-    <Button
-        android:id="@+id/button_drag"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Drag"
-        app:layout_constraintBottom_toTopOf="@+id/button_mic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_press" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button_mic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Say"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_drag" />
+            <Button
+                android:id="@+id/button_cat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cat" />
+            <Button
+                android:id="@+id/button_dog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dog" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button_flower"
+                android:layout_widh="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flower" />
+            <Button
+                android:id="@+id/button_bird"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bird" />
+        </TableRow>
+    </TableLayout>
+
 </android.support.constraint.ConstraintLayout>

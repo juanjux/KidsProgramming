@@ -26,25 +26,25 @@
         android:layout_alignStart="@+id/button_activator"
         android:layout_centerVertical="true"
         android:text="Condition"
-        app:layout_constraintBottom_toTopOf="@+id/button_actions"
+        app:layout_constraintBottom_toTopOf="@+id/button_action"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_activator" />
 
     <Button
-        android:id="@+id/button_actions"
+        android:id="@+id/button_action"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/button_condition"
         android:layout_below="@+id/button_condition"
-        android:text="Actions"
+        android:text="Action"
         app:layout_constraintBottom_toTopOf="@+id/button_play"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_condition"
-        tools:text="ACTIONS" />
+        tools:text="ACTION" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
@@ -76,7 +76,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toEndOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/button_actions"
+        app:layout_constraintTop_toBottomOf="@+id/button_action"
         app:layout_constraintVertical_bias="0.627" />
 
 </android.support.constraint.ConstraintLayout>

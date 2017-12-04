@@ -1,8 +1,8 @@
 Type:
 
-- If condition
-- While condition
-- Until condition
+- If condition (robot does once).
+- While condition (robot does forever once condition met).
+- Until condition (robot does form the start until condition met).
 
 Condition:
 
@@ -17,3 +17,15 @@ Robot Actions:
 - Play preset animation (animal eats, play, happy, sad, etc).
 - Show image from gallery
 - Play video/audio from gallery
+
+Needed Activities:
+
+From Conditions:
+- Buttons (touchable, draggable) and a mic (for the SayWord condition).
+
+From Actions:
+- Buttons for Image, Video or Audio that open the media
+  selection screens.
+
+From Code.Play:
+- Robot does what has been programmed to do.

@@ -1,9 +1,13 @@
 package net.juanjoalvarez.kidsprogramming
 
-abstract class Action
+abstract class Action()
 
-class ActionPress(val button: String): Action()
+abstract class MediaAction(path: String) : Action()
 
-class ActionDrag(val fromButton: String, val toButton: String): Action()
+class ActionUnset: Action()
 
-class ActionSay(val word: String): Action()
+class ActionShowImage(path: String) : MediaAction(path)
+
+class ActionPlayAudio(path: String) : MediaAction(path)
+
+class ActionPlayVideo(path: String) : MediaAction(path)

@@ -1,17 +1,13 @@
 package net.juanjoalvarez.kidsprogramming
 
-abstract class Condition {
+import android.widget.Button
 
-}
+abstract class Condition
 
-class TouchCondition : Condition() {
+class ConditionUnset : Condition()
 
-}
+class ConditionTouch(target: Button) : Condition()
 
-class DragCondition : Condition() {
+class ConditionDrag(from: Button, to: Button) : Condition()
 
-}
-
-class SayCondition: Condition() {
-    var word: String = ""
-}
+class ConditionSay(word: String): Condition()

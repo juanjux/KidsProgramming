@@ -5,31 +5,57 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 
+val REQUEST_ACTIVATOR: Int = 1
+val REQUEST_CONDITION: Int = 2
+val REQUEST_ACTION: Int = 3
+
 class CodeActivity : AppCompatActivity() {
 
-    var behaviours: List<Behaviour> = listOf()
+    private lateinit var btnPlay: Button
+    private var behaviour = Behaviour(Activator.Unset, ConditionUnset(), ActionUnset())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_code)
 
-        val btn_activator: Button = findViewById<Button>(R.id.button_activator)
-        val btn_condition: Button = findViewById<Button>(R.id.button_condition)
-        val btn_actions: Button = findViewById<Button>(R.id.button_actions)
+        val btnActivator: Button = findViewById<Button>(R.id.button_activator)
+        val btnCondition: Button = findViewById<Button>(R.id.button_condition)
+        val btnAction: Button = findViewById<Button>(R.id.button_action)
+        btnPlay = findViewById<Button>(R.id.button_play)
+        btnPlay.isEnabled = false
 
-        btn_activator.setOnClickListener {
+        btnActivator.setOnClickListener {
             val activatorIntent = Intent(this, ActivatorActivity::class.java)
-            startActivity(activatorIntent)
+            startActivityForResult(activatorIntent, REQUEST_ACTIVATOR)
         }
 
-        btn_condition.setOnClickListener {
+        btnCondition.setOnClickListener {
             val conditionIntent = Intent(this, ConditionActivity::class.java)
-            startActivity(conditionIntent)
+            startActivityForResult(conditionIntent, REQUEST_CONDITION)
         }
 
-        btn_actions.setOnClickListener {
-            val actionsIntent = Intent(this, ActionsActivity::class.java)
-            startActivity(actionsIntent)
+        btnAction.setOnClickListener {
+            val actionIntent = Intent(this, ActionActivity::class.java)
+            startActivityForResult(actionIntent, REQUEST_ACTION)
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        when (requestCode) {
+            REQUEST_ACTIVATOR -> behaviour.activator = Activator.values()[resultCode]
+            REQUEST_CONDITION -> println("condition")
+            REQUEST_ACTION -> println("action")
+        }
+        checkPlayReady()
+    }
+
+    fun checkPlayReady() {
+        if (behaviour.activator != Activator.Unset) {
+            btnPlay.isEnabled = true
+        } else {
+            btnPlay.isEnabled = false
         }
     }
 }
